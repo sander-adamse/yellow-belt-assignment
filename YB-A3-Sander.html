@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>A3 – Verbeterinitiatief Documentatie</title>
+<style>
+  @page { size: A3 landscape; margin: 8mm; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color:#1a1a1a; margin:0; padding:14px;
+         font-size:11.5px; display:flex; flex-direction:column; }
+
+  /* ---- titel + infoblok ---- */
+  .top { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:10px; }
+  h1 { font-size:21px; line-height:1.15; margin:0; color:#5a5a5a; font-weight:800; max-width:62%; }
+  .info { border:2px solid #e3007e; border-radius:3px; padding:8px 12px; min-width:300px; font-size:11px; }
+  .info div { margin:1px 0; }
+  .info b { color:#1a1a1a; }
+
+  /* ---- vellen ---- */
+  .sheet { display:flex; gap:5px; flex:1; }
+  .rail { background:#2f6184; color:#fff; writing-mode:vertical-rl; transform:rotate(180deg);
+          display:flex; align-items:center; justify-content:center; font-weight:bold;
+          letter-spacing:3px; font-size:12px; width:26px; border-radius:2px; flex:none; }
+  .col { display:flex; flex-direction:column; gap:6px; flex:1; min-width:0; }
+  .rrow { display:flex; gap:5px; flex:1; }
+  .rrow .box { flex:1; min-width:0; }
+
+  /* ---- box ---- */
+  .box { border:1px solid #b8b8b8; border-radius:2px; display:flex; flex-direction:column; }
+  .bar { color:#fff; font-weight:bold; font-size:11.5px; padding:3px 8px; }
+  .bar.magenta { background:#e3007e; }
+  .bar.green   { background:#84bd00; }
+  .content { padding:6px 9px; flex:1; }
+  .content > div { margin:2px 0; }
+
+  ul { margin:3px 0 3px 16px; padding:0; }
+  li { margin:2px 0; }
+  .lbl { font-weight:bold; }
+  .quote { font-style:italic; color:#333; margin:2px 0 5px; }
+
+  table.fish { width:100%; border-collapse:collapse; font-size:10px; margin:2px 0 4px; }
+  table.fish td { border:1px solid #ccc; padding:2px 5px; vertical-align:top; }
+  table.fish td:first-child { background:#eef3f7; font-weight:bold; width:74px; }
+  ol.why { margin:2px 0 0 16px; padding:0; font-size:10px; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>Gebruik dit A3 om je verbeteractie vast te leggen — teamdocumentatie weer overzichtelijk en vindbaar maken</h1>
+  <div class="info">
+    <div><b>Probleem:</b> teamdocumentatie op SharePoint onoverzichtelijk &amp; lastig vindbaar</div>
+    <div><b>Naam YB:</b> Sander Adamse</div>
+    <div><b>Team:</b> Digital Workplace</div>
+    <div><b>Datum:</b> 16-06-2026</div>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <!-- PLAN-rail -->
+  <div class="rail">PLAN</div>
+
+  <!-- LINKERKOLOM: PLAN -->
+  <div class="col">
+
+    <div class="box">
+      <div class="bar magenta">Definieer het probleem en doelstelling</div>
+      <div class="content">
+        <div class="lbl">Probleem</div>
+        <div class="quote">"Het probleem is dat al onze teamdocumentatie ongestructureerd op één SharePoint-site staat — alles is er gewoon in gegooid — waardoor collega's veel tijd kwijt zijn met zoeken en documenten soms helemaal niet meer terugvinden."</div>
+        <div><b>Gevolgen / risico:</b> tijdverlies bij het hele team én het risico dat iemand met verouderde of verkeerde informatie verder werkt.</div>
+        <div class="lbl">Doel</div>
+        <div class="quote">"Zo'n 6 weken na de training (uiterlijk 28-07-2026) kan iedereen in het team de documentatie die hij nodig heeft zelf terugvinden, zonder een collega te hoeven vragen, en daalt het aantal keren 'niet teruggevonden' naar nul."</div>
+        <div class="lbl">Scope</div>
+        <ul>
+          <li><b>Wel:</b> documentatie van team Digital Workplace op SharePoint</li>
+          <li><b>Niet:</b> docs van andere teams, of een nieuw systeem aanschaffen</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="bar green">Meet de feiten</div>
+      <div class="content">
+        <div>Inschatting op basis van het team (nog geen harde meting):</div>
+        <ul>
+          <li>17 teamleden, zoeken <b>± 1-2× per persoon per week</b>, <b>± 5-7 min</b> per keer</li>
+          <li>→ samen <b>± 2,5 uur/week ≈ ~115 uur/jaar</b> kwijt aan zoeken</li>
+          <li>Iets <i>helemaal niet</i> terugvinden: <b>± 6-10× per maand</b></li>
+          <li>Plek: <b>1 SharePoint-site</b> waar alles in gedumpt staat</li>
+          <li><b>Impact:</b> geen harde KPI, maar raakt productiviteit, doorlooptijd en werkplezier van het team</li>
+        </ul>
+        <div><b>Nog visueel maken:</b> staafje van de zoektijd + screenshot van de rommelige SharePoint.</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="bar green">Analyseer de oorzaken</div>
+      <div class="content">
+        <table class="fish">
+          <tr><td>Mens</td><td>Iedereen bewaart zijn documentatie op zijn eigen manier; geen gedeelde werkwijze</td></tr>
+          <tr><td>Methode</td><td>Geen afgesproken structuur; documentatie wordt zonder indeling op SharePoint gezet</td></tr>
+          <tr><td>Middelen</td><td>SharePoint is niet ingericht als documentatieplek (geen sjablonen, lastig zoeken)</td></tr>
+          <tr><td>Management</td><td>Geen eigenaar van de structuur</td></tr>
+        </table>
+        <div class="lbl">5x Waarom</div>
+        <ol class="why">
+          <li>Waarom niet terug te vinden? → SharePoint heeft geen logische structuur</li>
+          <li>Waarom geen structuur? → er is nooit een indeling afgesproken</li>
+          <li>Waarom niet afgesproken? → iedereen zet documenten neer zoals het uitkomt</li>
+          <li>Waarom doet iedereen dat? → niemand is verantwoordelijk voor de documentatie</li>
+          <li><b>Grondoorzaak:</b> beheer van documentatie is nooit als taak belegd</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="bar green">Genereer verbeterideeën</div>
+      <div class="content">
+        <ul>
+          <li><b>Als</b> teamlid dat documentatie nodig heeft (voor mezelf en collega's),</li>
+          <li><b>wil ik</b> onze documentatie op één gestructureerde plek: in <b>Confluence</b>, ingedeeld volgens <b>Diátaxis</b> (uitleg / how-to / naslag), met een vaste eigenaar,</li>
+          <li><b>zodat</b> iedereen snel zelf vindt wat hij zoekt, zonder lang te zoeken of een collega te vragen.</li>
+        </ul>
+        <div class="lbl">Oplossing die ik ga testen</div>
+        <div>De Cloud-documentatie als eerste in Confluence opzetten volgens Diátaxis — als pilot/template voor de rest van het team.</div>
+        <div class="lbl">SMART</div>
+        <div>Cloud-docs gestructureerd in Confluence; testpersonen vinden een doc binnen 1 min; haalbaar (Confluence bestaat al); af vóór 28-07-2026.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RECHTERKOLOM: DO / CHECK / ACT -->
+  <div class="col">
+
+    <div class="rrow">
+      <div class="box">
+        <div class="bar magenta">Implementeer de verbetering</div>
+        <div class="content">
+          <div class="lbl">Plan van Aanpak — klein beginnen met mijn eigen werkveld: Cloud</div>
+          <ul>
+            <li>Cloud-documentatie inventariseren en opschonen</li>
+            <li>Indelen volgens <b>Diátaxis</b> (uitleg / how-to / naslag) en in <b>Confluence</b> zetten</li>
+            <li>Laten testen door 2-3 Cloud-collega's; daarna als <b>template</b> gebruiken om de rest van het team over te laten zetten</li>
+          </ul>
+          <div class="lbl">Wie / wat / waar / wanneer / hoe / waarom</div>
+          <div><b>Wie:</b> ik, met input van Cloud-collega's · <b>Wat:</b> Cloud-docs herstructureren als pilot/template · <b>Waar:</b> in Confluence (bestaat al) · <b>Wanneer:</b> af vóór 28-07-2026 · <b>Hoe:</b> inventariseren → indelen → migreren → testen · <b>Waarom:</b> snel vindbaar + herbruikbare aanpak voor de rest van het team</div>
+          <div class="lbl">SMART</div>
+          <div class="quote">"De Cloud-documentatie staat vóór 28-07-2026 volledig en gestructureerd in Confluence (Diátaxis), waarbij 3 collega's in een test elk gevraagd document binnen 1 minuut terugvinden."</div>
+        </div>
+      </div>
+      <div class="rail">DO</div>
+    </div>
+
+    <div class="rrow">
+      <div class="box">
+        <div class="bar magenta">Controleer de oplossing</div>
+        <div class="content">
+          <ul>
+            <li><b>Effect vaststellen:</b> vinden collega's de Cloud-docs nu sneller terug, zonder erom te vragen? (test met dezelfde 3 collega's)</li>
+            <li><b>Wat was het resultaat?</b> <span style="color:#b35900">[na de test invullen: zoektijd vóór/na + aantal keren 'niet gevonden']</span></li>
+            <li>Is het doel hiermee behaald?</li>
+            <li>Resultaat visueel maken: vóór/na-grafiek of een screenshot van de nieuwe structuur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rail">CHECK</div>
+    </div>
+
+    <div class="rrow">
+      <div class="box">
+        <div class="bar magenta">Borg de oplossing</div>
+        <div class="content">
+          <ul>
+            <li><b>Geslaagd?</b> De template + afspraken vastleggen en iemand eigenaar maken, zodat de rest van het team het net zo doet</li>
+            <li><b>(Nog) niet geslaagd?</b> Achterhalen waarom de oplossing niet werkte</li>
+            <li>De PDCA-cyclus opnieuw doorlopen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rail">ACT</div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
